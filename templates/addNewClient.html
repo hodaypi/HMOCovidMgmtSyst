@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD NEW CLIENT</title>
+<!--	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+<!--	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+<!--	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+     <script>
+         function checkDates()
+         {
+<!--            var BirthDate=document.getElementsByName("bday");-->
+<!--            var currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);-->
+<!--            var day = currentDate.getDate()-->
+<!--            var month = currentDate.getMonth() + 1-->
+<!--            var year = currentDate.getFullYear()-->
+<!--            document.write("<b>" + day + "-" + month + "-" + year + "</b>")-->
+           var positiveDate=document.getElementsByName("positiveDate").getTime();
+           var RecoveryDate=document.getElementsByName("RecoveryDate").getTime();
+            if(startTime>endTime)
+            {
+                document.getElementById("message1").innerHTML="The recovery date cannot be before the sick date";
+                return false
+            }
+            if
+
+         }
+     </script>
+</head>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<h1>Add new client to HMO</h1>
+	</nav>
+	<div class="jumbotron">
+		<form class="form-group" onsubmit="checkDates()" action="/addNewClient" method="post">
+			<label >please fill in the client's details:</label>
+            <br>
+            <label>First name</label>
+			<input type="text" name="fname" class="form-control" required pattern="[A-Za-z]*" title="name contain only letters" ><br>
+            <label>Last name</label>
+            <input type="text" name="lname" class="form-control" required pattern="[A-Za-z]*" title="name contain only letters"  ><br>
+            <label>ID</label>
+            <input type="text" name="id" size=9 class="form-control" required pattern="[0-9]{9}" title="id contain exactly 9 numbers" ><br>
+            <label>Birthday</label>
+            <input type="date" name="bday" class="form-control" required ><br>
+            <label>Address</label>
+            <input type="text" name="street" placeholder="street" class="form-control" required pattern="[A-Za-z]*" title="Street contain only letters" >
+            <input type="text" name="number" placeholder="number" class="form-control" required pattern="[0-9]*" title="Street's number contain numbers" >
+            <input type="text" name="city"   placeholder="city" class="form-control" required  pattern="[A-Za-z]*" title="City contain only letters"><br>
+            <label>Telephone</label>
+            <input type="tel" name="tel" size="9" class="form-control" required pattern="[0-9]{9}"  title="Telephone contain exactly 9 numbers"><br>
+            <label>Phone</label>
+            <input type="tel" name="phone" size=10 class="form-control" required pattern="[0-9]{10}"title="Phone contain exactly 10 numbers" ><br>
+            <label>Covid Positive Date</label>
+             <input type="date" name="positiveDate" class="form-control"><br>
+            <label>Covid Recovery Date</label>
+             <input type="date" name="recoveryDate" class="form-control"><br>
+            <span id="message1" style="color:red"></span><br><br>
+
+             <label>get first vaccine?</label>
+            <input type="radio" name ="get1" value="Yes"/>Yes
+            <input type="radio" name ="get1" value="No" checked/>No<br>
+
+            <label for="producer-select1">Choose a producer:</label>
+            <select name="producer1" id="producer-select1">
+                <option value="Pfizer">Pfizer</option>
+                <option value="Moderna">Moderna</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+            </select><br>
+            <label>get vaccine Date</label>
+             <input type="date" name="vaccineDate1"  class="form-control"><br>
+
+            <label>get second vaccine?</label>
+            <input type="radio" name ="get2" value="Yes"/>Yes
+            <input type="radio" name ="get2" value="No" checked/>No<br>
+
+
+            <label for="producer-select2">Choose a producer:</label>
+            <select name="producer2" id="producer-select2">
+                <option value="Pfizer">Pfizer</option>
+                <option value="Moderna">Moderna</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+            </select><br>
+            <label>get vaccine Date</label>
+             <input type="date" name="vaccineDate2"  class="form-control"><br>
+
+             <label>get third vaccine?</label>
+             <input type="radio" name ="get3" value="Yes"/>Yes
+            <input type="radio" name ="get3" value="No" checked/>No<br>
+
+            <label for="producer-select3">Choose a producer:</label>
+            <select name="producer3" id="producer-select3">
+                <option value="Pfizer">Pfizer</option>
+                <option value="Moderna">Moderna</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+            </select><br>
+
+            <label>get vaccine Date</label>
+             <input type="date" name="vaccineDate3"  class="form-control"><br>
+
+            <label>get fourth vaccine?</label>
+             <input type="radio" name ="get4" value="Yes"/>Yes
+            <input type="radio" name ="get4" value="No" checked/>No<br>
+
+            <label for="producer-select4">Choose a producer:</label>
+            <select name="producer4" id="producer-select4">
+                <option value="Pfizer">Pfizer</option>
+                <option value="Moderna">Moderna</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+            </select><br>
+            <label>get vaccine Date</label>
+             <input type="date" name="vaccineDate4"  class="form-control"><br>
+
+            <br>
+			<button class="btn btn-primary" type="submit" name="submit" value="add">Submit</button>
+<!--			<button class="btn btn-danger" type="submit" name="submit" value="delete">Delete</button>-->
+		</form>
+
+	</div>
+
+    <div>
+          {{failure}}
+    </div>
+
+</body>
+</html>
