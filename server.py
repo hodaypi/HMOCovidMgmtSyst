@@ -41,18 +41,18 @@ db = firebase.database()
 
 # # Add the Vaccines to the database:
 # dictOfVaccines = {
-# "p1": {"vaccineDose": "Booster1", "vaccineProducer": "Pfizer"},
-# "p2": {"vaccineDose": "Booster2", "vaccineProducer": "Pfizer"},
-# "p3": {"vaccineDose": "Booster3", "vaccineProducer": "Pfizer"},
-# "p4": {"vaccineDose": "Booster4", "vaccineProducer": "Pfizer"},
-# "m1": {"vaccineDose": "Booster1", "vaccineProducer": "Moderna"},
-# "m2": {"vaccineDose": "Booster2", "vaccineProducer": "Moderna"},
-# "m3": {"vaccineDose": "Booster3", "vaccineProducer": "Moderna"},
-# "m4": {"vaccineDose": "Booster4", "vaccineProducer": "Moderna"},
-# "a1": {"vaccineDose": "Booster1", "vaccineProducer": "AstraZeneca"},
-# "a2": {"vaccineDose": "Booster2", "vaccineProducer": "AstraZeneca"},
-# "a3": {"vaccineDose": "Booster3", "vaccineProducer": "AstraZeneca"},
-# "a4": {"vaccineDose": "Booster4", "vaccineProducer": "AstraZeneca"}
+# "1p": {"vaccineDose": "Booster1", "vaccineProducer": "Pfizer"},
+# "2p": {"vaccineDose": "Booster2", "vaccineProducer": "Pfizer"},
+# "3p": {"vaccineDose": "Booster3", "vaccineProducer": "Pfizer"},
+# "4p": {"vaccineDose": "Booster4", "vaccineProducer": "Pfizer"},
+# "1m": {"vaccineDose": "Booster1", "vaccineProducer": "Moderna"},
+# "2m": {"vaccineDose": "Booster2", "vaccineProducer": "Moderna"},
+# "3m": {"vaccineDose": "Booster3", "vaccineProducer": "Moderna"},
+# "4m": {"vaccineDose": "Booster4", "vaccineProducer": "Moderna"},
+# "1a": {"vaccineDose": "Booster1", "vaccineProducer": "AstraZeneca"},
+# "2a": {"vaccineDose": "Booster2", "vaccineProducer": "AstraZeneca"},
+# "3a": {"vaccineDose": "Booster3", "vaccineProducer": "AstraZeneca"},
+# "4a": {"vaccineDose": "Booster4", "vaccineProducer": "AstraZeneca"}
 # }
 #
 # for id, data in dictOfVaccines.items():
@@ -137,10 +137,64 @@ db = firebase.database()
 #     {"typeOfVaccine": "p4",
 #      "vaccineDate": vaccineDate}],})
 #######################
+# client = db.child("Clients Details").child("123451231").get()
+# clientID = client.key()
+# clientD = client.val()
+# print(clientID,clientD)
+# had=db.child("Clients Details").child("123453241").child("positiveCovidDate").get()
+# if had.val()==None:
+#     getcovid="didnt get covid"
+#     print(getcovid)
+# else:
+#     getcovid=had.val()
+# health=db.child("Clients Details").child("123453241").child("covidRecoveryDate").get()
+# if health.val()==None:
+#     finishcovid="didnt heal covid"
+#     print(finishcovid)
+# else:
+#     finishcovid=health.val()
+
+
+# getvaccine=db.child("Clients Details").child("987654321").child("Vaccines").get()
+# if getvaccine.val()==None:
+#     vac="didnt get vac covid"
+#     print(vac)
+# else:
+#     clientVaccine=getvaccine.val()
+#     print(clientVaccine)
+#     print(clientVaccine.values())
+#     # check = 0
+#     for i in clientVaccine.keys():
+#         booster =db.child("Covid's Vaccines").child(i).child("vaccineDose").get()
+#         print(booster.val())
+#         producer = db.child("Covid's Vaccines").child(i).child("vaccineProducer").get()
+#         print(producer.val())
+#         date=db.child("Clients Details").child("987654321").child("Vaccines").child(i).child("vaccineDate").get()
+#         print(date.val())
+
+
+
+#
+#         if request.form['get' + str(i)] == "Yes" and check == 0:
+#                             vaccineDate = request.form['vaccineDate' + str(i)]
+#                             if request.form['producer' + str(i)] == "Pfizer":
+#                                 idOfVaccine = db.child("Covid's Vaccines").child('p' + str(i)).get()
+#                             elif request.form['producer' + str(i)] == "Moderna":
+#                                 idOfVaccine = db.child("Covid's Vaccines").child('m' + str(i)).get()
+#                             else:
+#                                 idOfVaccine = db.child("Covid's Vaccines").child('a' + str(i)).get()
+#                             db.child("Clients Details").child(clientId).child("Vaccines").child(idOfVaccine.key()).set(
+#                                 {"vaccineDate": vaccineDate})
+#
+# #
+# #
 
 
 app = Flask(__name__)
 
+def empty(detail):
+    if detail == "":
+        return True
 
 @app.route('/', methods=['GET', 'POST'])
 def welcomeScreen():
@@ -150,6 +204,7 @@ def welcomeScreen():
         elif request.form['submit'] == 'Search':
             return render_template('findClient.html')
     return render_template("welcomeScreen.html")
+
 
 # //addNewClient
 @app.route('/addNewClient', methods=['GET', 'POST'])
@@ -166,27 +221,29 @@ def addNewClient():
             else:
                 db.child("Clients Details").child(clientId).set(
                     {
-                        "firstName":  request.form['fname'],
+                        "firstName": request.form['fname'],
                         "lastName": request.form['lname'],
                         "birthday": request.form['bday'],
                         "address": request.form['street'] + " " + request.form['number'] + ", " + request.form['city'],
-                        "telephone":  request.form['tel'],
+                        "telephone": request.form['tel'],
                         "cellPhone": request.form['phone']})
                 if request.form['positiveDate'] != "":
-                    db.child("Clients Details").child(clientId).update({"positiveCovidDate": request.form['positiveDate']})
+                    db.child("Clients Details").child(clientId).update(
+                        {"positiveCovidDate": request.form['positiveDate']})
                 if request.form['recoveryDate'] != "":
-                    db.child("Clients Details").child(clientId).update({"covidRecoveryDate": request.form['recoveryDate']})
+                    db.child("Clients Details").child(clientId).update(
+                        {"covidRecoveryDate": request.form['recoveryDate']})
 
                 check = 0
                 for i in range(1, 5):
                     if request.form['get' + str(i)] == "Yes" and check == 0:
                         vaccineDate = request.form['vaccineDate' + str(i)]
                         if request.form['producer' + str(i)] == "Pfizer":
-                            idOfVaccine = db.child("Covid's Vaccines").child('p' + str(i)).get()
+                            idOfVaccine = db.child("Covid's Vaccines").child(str(i)+'p').get()
                         elif request.form['producer' + str(i)] == "Moderna":
-                            idOfVaccine = db.child("Covid's Vaccines").child('m' + str(i)).get()
+                            idOfVaccine = db.child("Covid's Vaccines").child(str(i)+'m').get()
                         else:
-                            idOfVaccine = db.child("Covid's Vaccines").child('a' + str(i)).get()
+                            idOfVaccine = db.child("Covid's Vaccines").child(str(i)+'a').get()
                         db.child("Clients Details").child(clientId).child("Vaccines").child(idOfVaccine.key()).set(
                             {"vaccineDate": vaccineDate})
                     # #  אם לא עשה את הראשון אז מן הסתם שלא עשה את השאר
@@ -205,9 +262,55 @@ def findClient():
             idOfClient = request.form['id']
             try:
                 client = db.child("Clients Details").child(idOfClient).get()
-                theid= client.key()
-                theClient = client.val()
-                return render_template('ClientDetails.html', success=theClient.items())
+                clientID = client.key()
+                clientD = client.val()
+                personalDetails =[clientD["firstName"] + " " + clientD["lastName"], clientID, clientD["address"], clientD["birthday"],clientD["telephone"],clientD["cellPhone"]]
+
+                gotCovid = db.child("Clients Details").child(idOfClient).child("positiveCovidDate").get()
+                if gotCovid.val() is None:
+                    getCovid = "Did'nt get covid"
+                else:
+                    getCovid = gotCovid.val()
+
+                finishCovid = db.child("Clients Details").child(idOfClient).child("covidRecoveryDate").get()
+                if finishCovid.val() is None:
+                    recoverCovid = "Did'nt heal covid"
+                else:
+                    recoverCovid = finishCovid.val()
+
+                getVaccine = db.child("Clients Details").child(idOfClient).child("Vaccines").get()
+                if getVaccine.val() is None:
+                    vaccineCovid="Did'nt take vaccine"
+                    vaccineList=[]
+                else:
+                    vaccineCovid = "Got vaccine"
+                    clientVaccine = getVaccine.val()
+                    print(clientVaccine)
+                    print(clientVaccine.values())
+                    vaccineList = []
+                    for i in clientVaccine.keys():
+                        list =[]
+                        booster = db.child("Covid's Vaccines").child(i).child("vaccineDose").get()
+                        list.append(booster.val())
+
+                        producer = db.child("Covid's Vaccines").child(i).child("vaccineProducer").get()
+                        list.append(producer.val())
+
+                        date = db.child("Clients Details").child(idOfClient).child("Vaccines").child(i).child("vaccineDate").get()
+                        list.append(date.val())
+
+                        vaccineList.append(list)
+                    # print(vaccineList)
+                return render_template('ClientDetails.html',
+                                       personal=personalDetails,
+                                       sick=getCovid,
+                                       healthy=recoverCovid,
+                                       vaccine=vaccineCovid,
+                                       listOfVaccine=vaccineList)
+            # successkeys = clientD.keys(),
+            # successValues = clientD.values(),
+            #
+            # all = clientD.items()
             except:
                 noClient = "The client is not exist in the system. Try to enter another ID"
                 return render_template('findClient.html', failure=noClient)
@@ -217,3 +320,4 @@ def findClient():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
