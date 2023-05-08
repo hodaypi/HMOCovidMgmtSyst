@@ -5,15 +5,60 @@
     <title>CLIENT DETAILS:</title>
 </head>
 <body>
+	<label>Personal Details:</label><br>
+	<br>
+	<label>Full Name:</label>
+		{{personal[0]}}
+	<br>
+	<label>ID:</label>
+		{{personal[1]}}
+	<br>
+	<label>Address:</label>
+		{{personal[2]}}
+	<br>
+	<label>Birthday:</label>
+		{{personal[3]}}
+	<br>
+	<label>Telephone:</label>
+		{{personal[4]}}
+	<br>
+	<label>Phone:</label>
+		{{personal[5]}}
+	<br>
+	<br>
+	<label>Covid Details:</label><br><br>
+
+	<label>Sick with Corona:</label>
+		{{sick}}<br>
+	<label>Recovered from Corona:</label>
+		{{healthy}}<br>
+	<br>
+
+	<label>Covid Vaccines:</label><br>
+	{{vaccine}}
+
 <div class="container-fluid">
-		{% for l in success %}
+		{% for list in listOfVaccine %}
 			<ul class="list-group">
 				<li class="list-group-item">
-					{{l}}
+				<label>vaccine booster:</label>
+					{{list.0}}
+				<br>
+				<label>vaccine producer:</label>
+					{{list.1}}
+				<br>
+				<label>vaccine Date:</label>
+					{{list.2}}
+				<br>
 				</li>
 			</ul>
 		{% endfor %}
 	</div>
+
+
+
+
+
 
 </body>
 </html>
