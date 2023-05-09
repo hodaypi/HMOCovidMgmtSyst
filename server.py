@@ -105,6 +105,7 @@ db = firebase.database()
 #                 telephone = request.form['tel']
 #                 cellPhone = request.form['phone']
 ###############
+
 ########################
 # check if exist in database:
 # check= db.child("Clients Details").child("7").get().val()
@@ -188,9 +189,6 @@ db = firebase.database()
 #                             db.child("Clients Details").child(clientId).child("Vaccines").child(idOfVaccine.key()).set(
 #                                 {"vaccineDate": vaccineDate})
 #
-# #
-# #
-
 
 app = Flask(__name__)
 
