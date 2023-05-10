@@ -3,6 +3,8 @@
 
 ## Technologies:
 * webstorm 
+* Firebase Realtime Database
+
 ## languages:
 * Python
 * HTML
