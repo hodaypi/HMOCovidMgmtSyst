@@ -1,9 +1,9 @@
 #  Covid Managament System for HMO
 
 
-##Technologies:
+## Technologies:
 * webstorm 
-##languages:
+## languages:
 * Python
 * HTML
 * CSS
