@@ -1,11 +1,13 @@
 #  Covid Managament System for HMO
-* [technologies](#Technologies)
-* [Packages](#Packages)
 
 
 ##Technologies:
 * webstorm 
-languages: javaScript, html, css
+##languages:
+* Python
+* HTML
+* CSS
+* JavaScript
 to run this project, install it locally using pip:
 #### pip install flask
 #### pip install pyrebase
