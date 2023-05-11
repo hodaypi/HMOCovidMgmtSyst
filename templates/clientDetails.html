@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>CLIENT DETAILS:</title>
+	<style>
+		h1
+		{
+			font-family: calibri;
+			font-size: 40px;
+			text-align: center;
+		}
+		label
+   		{
+		font-family: calibri;
+		font-size: 19.5px;
+		text-align: center;
+		font-weight: normal;
+		}
+		body
+		{
+			font-size: 19.5px;
+			font-family: calibri;
+			font-weight: normal;
+		}
+	</style>
 </head>
 <body>
-	<label>Personal Details:</label><br>
-	<br>
+	<h1>GET CLIENT DETAILS</h1>
+	<label  style="font-size:25px;"><b>Personal Details:</b></label><br>
 	<label>Full Name:</label>
 		{{personal[0]}}
 	<br>
@@ -26,39 +47,34 @@
 		{{personal[5]}}
 	<br>
 	<br>
-	<label>Covid Details:</label><br><br>
+	<label style="font-size:25px;"><b>Covid Details:</b></label><br>
 
-	<label>Sick with Corona:</label>
+	<label>Positive to Covid:</label>
 		{{sick}}<br>
-	<label>Recovered from Corona:</label>
+	<label>Recovered from Covid:</label>
 		{{healthy}}<br>
 	<br>
 
-	<label>Covid Vaccines:</label><br>
+	<label  style="font-size:25px;"><b>Covid Vaccines:</b></label><br>
 	{{vaccine}}
 
 <div class="container-fluid">
 		{% for list in listOfVaccine %}
 			<ul class="list-group">
 				<li class="list-group-item">
-				<label>vaccine booster:</label>
+				<label>Vaccine dose:</label>
 					{{list.0}}
 				<br>
-				<label>vaccine producer:</label>
+				<label>Vaccine producer:</label>
 					{{list.1}}
 				<br>
-				<label>vaccine Date:</label>
+				<label>Vaccine Date:</label>
 					{{list.2}}
 				<br>
 				</li>
 			</ul>
 		{% endfor %}
 	</div>
-
-
-
-
-
 
 </body>
 </html>
