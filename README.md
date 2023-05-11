@@ -5,8 +5,13 @@ The available system options:
 * Get details of a client that exists at the checkout
 
 ## Technologies:
-* PyCharm 2019.2
 * Firebase Realtime Database
+ * Establishing a database for the system.
+* PyCharm 2019.2
+ * Setting up a local flask server in Python.
+ * Connecting the database to the server in Python.
+ * Establishing a client side - for a user-friendly user interface using HTML, CSS, JavaScript.
+ 
 
 ## Languages:
 ### Server side:
