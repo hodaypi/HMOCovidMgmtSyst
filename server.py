@@ -26,6 +26,20 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
+# data = {"ID": "123456789", "firstName": "Dan", "lastName": "Tal"}
+# # add new client
+# id = "1234"
+# db.child("try").child(id).set(data)
+
+# update client details
+# db.child("clientsDetails").child("names").update({"lastName":"yona"})
+
+
+# users = db.child("clientsDetails").child("lastName").get()
+# users = db.child("clientsDetails").get()
+# print(users.key())
+# print(users.val())
+
 #########################################
 
 # # Add the Vaccines to the database:
@@ -49,33 +63,8 @@ db = firebase.database()
 
 #########################################
 
-##########
-# Read client by his id:
-# looking for the client that the HMO employee earch by client id
 
-# clients = db.child("Clients Details").child("-NUmUTa-zhVIBLJ1rTio").get()
-#
-#
-# print(clients.val())
-#
-# for client in clients.each():
-#     # print(client.val())
-#     # print(client.key())
-#     if client.val()["id"] == "123456":
-#         print(client.val())
 
-# first try: it is not smart:
-# clients = db.child("Clients Details").get()
-#             stop = 0
-#             for client in clients.each():
-#                 if client.val()["id"] == idOfClient and stop == 0:
-#                     print(client.val())
-#                     findClient = client.val()
-#                     stop = 1
-#                     return render_template('findClient.html', t=findClient.values())
-#             else:
-#                 noClient = "there is no client"
-#                 return render_template('findClient.html', s=noClient)
 ###################
 # add new client
 # firstName = request.form['fname']
@@ -108,17 +97,7 @@ db = firebase.database()
 #         # print()
 
 ##########
-# idOfVaccine=db.child("Vaccine").get()
-# "vacinnes": [
-#
-# idOfVaccive: {"typeOfVaccine": "p1",
-#      "vaccineDate": vaccineDate},
-#     {"typeOfVaccine": "p2",
-#      "vaccineDate": vaccineDate},
-#     {"typeOfVaccine": "p3",
-#      "vaccineDate": vaccineDate},
-#     {"typeOfVaccine": "p4",
-#      "vaccineDate": vaccineDate}],})
+
 #######################
 # client = db.child("Clients Details").child("123451231").get()
 # clientID = client.key()
@@ -284,22 +263,22 @@ def findClient():
 
                 gotCovid = db.child("Clients Details").child(idOfClient).child("positiveCovidDate").get()
                 if not dataExist(gotCovid.val()):
-                    getCovid = "Did'nt get covid"
+                    getCovid = "The client doesn't have covid"
                 else:
                     getCovid = gotCovid.val()
 
                 finishCovid = db.child("Clients Details").child(idOfClient).child("covidRecoveryDate").get()
                 if not dataExist(finishCovid.val()):
-                    recoverCovid = "Did'nt heal covid"
+                    recoverCovid = "The client doesn't recovered from covid"
                 else:
                     recoverCovid = finishCovid.val()
 
                 getVaccine = db.child("Clients Details").child(idOfClient).child("Vaccines").get()
                 if not dataExist(getVaccine.val()):
-                    vaccineCovid = "Did'nt take vaccine"
+                    vaccineCovid = "The client hasn't received covid vaccine"
                     vaccineList = []
                 else:
-                    vaccineCovid = "Got vaccine"
+                    vaccineCovid = "The client received:"
                     clientVaccine = getVaccine.val()
                     vaccineList = []
                     for i in clientVaccine.keys():
@@ -328,6 +307,7 @@ def findClient():
                 return render_template('findClient.html', failure=noClient)
         return render_template('findClient.html')
     return render_template('findClient.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
