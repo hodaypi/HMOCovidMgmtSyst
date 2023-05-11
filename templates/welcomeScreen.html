@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style>
+	div
+	{
+		font-family: calibri;
+		font-size: 30px;
+		text-align: center;
+	}
+	 h1, h2
+    {
+        font-family: calibri;
+		font-size: 50px;
+		text-align: center;
+    }
+	label
+	{
+		font-family: calibri;
+		font-size: 50px;
+		text-align: center;
+		font-weight: bold;
+	}
+	form
+	{
+		text-align: center;
+	}
+    button
+    {
+    	padding =18px 18px;
+    	border-radius: 10px;
+    	border: 1px solid black;
+    	font-size: 35px;
+    	font-family: calibri;
+    	background-color: #8FBC8F;
+    }
+
+}
+</style>
     <meta charset="UTF-8">
     <title>HMO Employee Screen</title>
 </head>
+
 <body>
-<nav class="navbar navbar-default">
-		<h1>employee options:</h1>
-	</nav>
+<div>
+		<label>Hello,</label><br>
+		<label>Select the option you want:</label>
+</div>
 	<div class="jumbotron">
 		<form class="form-group" action="/" method="post">
-			<label >please choose:</label>
             <br>
-			<button class="btn btn-primary" type="submit" name="submit" value="Add">add new client</button>
-			<button class="btn btn-primary" type="submit" name="submit" value="Search">search client</button>
+			<button class="btn btn-primary" type="submit" name="submit" value="Add">Add new client</button>
+			<button class="btn btn-primary" type="submit" name="submit" value="Search">Search client</button>
 		</form>
 
 	</div>
 	<div>
+		<br>
 		{{failure}}
 	</div>
 
