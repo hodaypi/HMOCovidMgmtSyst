@@ -1,5 +1,11 @@
 #  Covid Managament System for HMO
-
+Covid database management system for a large HMO. The system will present the members in the HMO, and will manage the entry of the records in a database. In addition, the system will store key information regarding the covid epidemic in the context of the members of the HMO. In the future, they will be able to turn to this database in order to carry out various retrievals.
+The available system options:
+Entering a new client into the health fund (entering the personal details and details about the covid)
+Get details of a client that exists at the checkout
+System options:
+* Insertering a new client into the health fund (entering the personal details and details about the covid)
+* Get details of a client that exists at the HMO
 
 ## Technologies:
 * PyCharm 2019.2
