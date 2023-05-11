@@ -10,7 +10,7 @@ The available system options:
 
 ## Languages:
 Server side:
-* Python
+* Python <br />
 Client side:
 * HTML
 * CSS
