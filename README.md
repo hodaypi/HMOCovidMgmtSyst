@@ -39,16 +39,17 @@ to run the system <br />
 By clicking on the domain, a main screen will be displayed
 ![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/3d0b3cc1-8063-4904-a2df-7f79d8512aff) 
 <br />
-Clicking on "Add a new client" will redirect you to the "Add a new client" screen
+Clicking on "Add a new client" will redirect you to the "Add a new client" screen <br />
 ![add](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/8a70de84-39b0-443f-969f-5b61fe9c4226)
 <br />
-Clicking on "submit" will add the new client to the database (if the form is filled out as required) and redirect the user to the main screen.
+Clicking on "submit" will add the new client to the database (if the form is filled out as required) and redirect the user to the main screen.<br />
 ![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/a4db18dd-eeae-48aa-9214-e0b8bfc31e91)
-
 <br />
-Clicking on the "Search Client" button will redirect you to the "Search Client" page
-![search](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4a2ca766-6e0d-4c2d-95f5-6b6e56933d26)
+Clicking on the "Search Client" button will redirect you to the "Search Client" page <br />
+![search](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4a2ca766-6e0d-4c2d-95f5-6b6e56933d26) 
+<br />
 Clicking the "search" button will redirect you to the "client details" page (if the client exists in the system)
+<br />
 ![client](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4794a65f-9e50-42f4-96bf-5896a0679ed1)
 
 
