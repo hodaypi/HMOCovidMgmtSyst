@@ -37,7 +37,12 @@ to run the system <br />
 * Click on the local flask server that was build and the website will be presented. <br />
 ## Mock Up:
 By clicking on the domain, a main screen will be displayed
-![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/3d0b3cc1-8063-4904-a2df-7f79d8512aff)
+![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/3d0b3cc1-8063-4904-a2df-7f79d8512aff) 
+<br />
+Clicking on "Add a new client" will redirect you to the "Add a new client" screen
+![add](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/8a70de84-39b0-443f-969f-5b61fe9c4226)
+
+ 
 
 
 
