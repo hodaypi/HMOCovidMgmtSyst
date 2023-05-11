@@ -47,13 +47,7 @@ Clicking on "submit" will add the new client to the database (if the form is fil
 <br />
 Clicking on the "Search Client" button will redirect you to the "Search Client" page
 ![search](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4a2ca766-6e0d-4c2d-95f5-6b6e56933d26)
-
-
-
- 
-
-
-
+Clicking the "search" button will redirect you to the "client details" page (if the client exists in the system)
 
 ## Assumptions:
 * There are 3 covid vaccine producers :
