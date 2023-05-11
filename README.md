@@ -18,9 +18,9 @@ to run this project, install it locally using pip:
 
 ## Assumptions:
 * There are 3 covid vaccine producers :
-**  Pfizer
-** Moderna
-** AstraZeneca
+  *  Pfizer
+  * Moderna
+  * AstraZeneca
 * Each vaccine producer has 4 types of doses:
 ** booster 1, booster 2, booster 3, booster 4.
 *
