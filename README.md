@@ -11,7 +11,7 @@ The available system options:
 ## Languages:
 ### Server side:
 * Python
-#### Client side:
+### Client side:
 * HTML
 * CSS
 * JavaScript
