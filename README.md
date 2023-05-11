@@ -9,9 +9,9 @@ The available system options:
 * Firebase Realtime Database
 
 ## Languages:
-Server side:
-* Python <br />
-Client side:
+### Server side:
+* Python
+#### Client side:
 * HTML
 * CSS
 * JavaScript
