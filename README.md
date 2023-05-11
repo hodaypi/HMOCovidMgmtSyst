@@ -12,7 +12,6 @@ The available system options:
   * Connecting the database to the server in Python.
   * Establishing a client side - for a user-friendly user interface using HTML, CSS, JavaScript.
  
-
 ## Languages:
 ### Server side:
 * Python
@@ -21,10 +20,22 @@ The available system options:
 * CSS
 * JavaScript
 
-## Packages:
-to run this project, install it locally using pip:
-* pip install flask
-* pip install pyrebase
+## Setup:
+to run the system <br />
+* Install Pycharm or any other software where you can run Python software
+* Open a project
+* Install the required libraries locally using pip:
+  * pip install flask
+  * pip install pyrebase
+* Download the server.py file and the templates folder
+* Make sure the templates folder has 4 files:
+  * welcomeScreen.html
+  * addNewClient.html
+  * findClient.html
+  * clientDetails.html
+* Run the server.py file
+* Click on the local flask server that was build and the website will be presented
+
 
 
 ## Assumptions:
