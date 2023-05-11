@@ -23,10 +23,10 @@ to run this project, install it locally using pip:
   * Moderna
   * AstraZeneca
 * Each vaccine producer has 4 types of doses:
- * booster 1
- * booster 2
- * booster 3
- * booster 4
+  * booster 1
+  * booster 2
+  * booster 3
+  * booster 4
  * Adding a new client to the system will create a record where the unique key of the record is the client's ID.
  * Retrieving the details about the client is through the client's ID - the unique identifier.
  * A client can get sick with covid no more than once.
