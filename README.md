@@ -34,7 +34,7 @@ to run the system <br />
   * findClient.html
   * clientDetails.html
 * Run the server.py file
-* Click on the local flask server that was build and the website will be presented.
+* Click on the local flask server that was build and the website will be presented. <br />
 (To get access to the database please email me a request: hodaypink@gmail.com)
 
 
