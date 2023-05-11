@@ -49,11 +49,6 @@ db = firebase.database()
 
 #########################################
 
-# option 1: but no unique key..
-# with open('vaccines.json') as response:
-#     data = json.load(response)
-# db.set(data)
-##########
 ##########
 # Read client by his id:
 # looking for the client that the HMO employee earch by client id
