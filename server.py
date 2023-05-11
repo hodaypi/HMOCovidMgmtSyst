@@ -26,20 +26,6 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
-# data = {"ID": "123456789", "firstName": "Dan", "lastName": "Tal"}
-# # add new client
-# id = "1234"
-# db.child("try").child(id).set(data)
-
-# update client details
-# db.child("clientsDetails").child("names").update({"lastName":"yona"})
-
-
-# users = db.child("clientsDetails").child("lastName").get()
-# users = db.child("clientsDetails").get()
-# print(users.key())
-# print(users.val())
-
 #########################################
 
 # # Add the Vaccines to the database:
@@ -68,7 +54,6 @@ db = firebase.database()
 #     data = json.load(response)
 # db.set(data)
 ##########
-#
 ##########
 # Read client by his id:
 # looking for the client that the HMO employee earch by client id
