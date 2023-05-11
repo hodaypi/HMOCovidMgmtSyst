@@ -349,6 +349,5 @@ def findClient():
         return render_template('findClient.html')
     return render_template('findClient.html')
 
-
 if __name__ == '__main__':
     app.run(debug=True)
