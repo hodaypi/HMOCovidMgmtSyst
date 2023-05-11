@@ -8,8 +8,10 @@ The available system options:
 * PyCharm 2019.2
 * Firebase Realtime Database
 
-## languages:
+## Languages:
+Server side:
 * Python
+Client side:
 * HTML
 * CSS
 * JavaScript
