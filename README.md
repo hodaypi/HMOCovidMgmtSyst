@@ -6,11 +6,11 @@ The available system options:
 
 ## Technologies:
 * Firebase Realtime Database
- * Establishing a database for the system.
+  * Establishing a database for the system.
 * PyCharm 2019.2
- * Setting up a local flask server in Python.
- * Connecting the database to the server in Python.
- * Establishing a client side - for a user-friendly user interface using HTML, CSS, JavaScript.
+  * Setting up a local flask server in Python.
+  * Connecting the database to the server in Python.
+  * Establishing a client side - for a user-friendly user interface using HTML, CSS, JavaScript.
  
 
 ## Languages:
