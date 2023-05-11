@@ -43,11 +43,17 @@ Clicking on "Add a new client" will redirect you to the "Add a new client" scree
 ![add](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/8a70de84-39b0-443f-969f-5b61fe9c4226)
 <br />
 Clicking on "submit" will add the new client to the database (if the form is filled out as required) and redirect the user to the main screen.
-![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/63876338-bba1-47d1-b439-4bf1ba73f2a6)
+![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/a4db18dd-eeae-48aa-9214-e0b8bfc31e91)
+
 <br />
 Clicking on the "Search Client" button will redirect you to the "Search Client" page
 ![search](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4a2ca766-6e0d-4c2d-95f5-6b6e56933d26)
 Clicking the "search" button will redirect you to the "client details" page (if the client exists in the system)
+![client](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/4794a65f-9e50-42f4-96bf-5896a0679ed1)
+
+
+
+
 
 ## Assumptions:
 * There are 3 covid vaccine producers :
