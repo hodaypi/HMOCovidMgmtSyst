@@ -58,7 +58,7 @@ to run the system <br />
  * Receiving the second vaccine is no less than a month after receiving the first vaccine.
  * Receiving the third vaccine is no less than 5 months after receiving the second vaccine.
  * Receiving the fourth vaccine is no less than 4 months after receiving the third vaccine.
- * * Retrieving the details about the client is through the client's ID - the unique identifier.
+ * Retrieving the details about the client is through the client's ID - the unique identifier.
  * When displaying the user's details, all the personal details will be displayed.
  * When displaying user information, sick and recovery dates will not be displayed for clients who have not fallen ill.
  * When displaying the user details, the vaccination details will not be shown to the client who has not been vaccinated.
