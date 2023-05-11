@@ -35,6 +35,9 @@ to run the system <br />
   * clientDetails.html
 * Run the server.py file
 * Click on the local flask server that was build and the website will be presented. <br />
+## Mock Up:
+By clicking on the domain, a main screen will be displayed
+![welcome](https://github.com/hodaypi/HMOCovidMgmtSyst/assets/62617707/3d0b3cc1-8063-4904-a2df-7f79d8512aff)
 
 
 
